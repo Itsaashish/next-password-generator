@@ -1,13 +1,3 @@
-// "use client";
-
-// import { toast as sonnerToast } from "sonner";
-
-// export function useToast() {
-//   return {
-//     toast: sonnerToast,
-//   };
-// }
-
 "use client";
 
 // Inspired by react-hot-toast library
@@ -165,7 +155,7 @@ function toast({ ...props }: Toast) {
       ...props,
       id,
       open: true,
-      onOpenChange: (open: any) => {
+      onOpenChange: (open) => {
         if (!open) dismiss();
       },
     },

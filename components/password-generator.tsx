@@ -22,7 +22,7 @@ import {
   ShieldAlert,
   ShieldCheck,
 } from "lucide-react";
-// import { useToast } from "@/hooks/use-toast";
+
 import { useToast } from "./hooks/use-toast";
 import { ModeToggle } from "@/components/mode-toggle";
 
@@ -97,7 +97,8 @@ export default function PasswordGenerator() {
 
     navigator.clipboard.writeText(password);
     setCopied(true);
-    toast.success("Copied to clipboard", {
+    toast({
+      title: "Copied to clipboard",
       description: "Password has been copied to your clipboard",
     });
 
